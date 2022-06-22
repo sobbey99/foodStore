@@ -2,7 +2,7 @@
     'use strict';
     // this function is strict...
  }());
-
+// START PRELOADER 
 let 
     preloader = document.getElementById("page-preloader"),
     images = document.images,
@@ -35,3 +35,12 @@ function image_loaded() {
     }
     
 }
+
+// END PRELOADER
+
+
+
+
+// START HEADER
+// xxxx
+// END HEADER
