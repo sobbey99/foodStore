@@ -4,6 +4,7 @@
  }());
 // START PRELOADER 
 let 
+    bodiSite = document.querySelector(".bodyNoScroll"),
     preloader = document.getElementById("page-preloader"),
     images = document.images,
     images_total_count = images.length,
@@ -30,6 +31,7 @@ function image_loaded() {
         setTimeout(function(){
             if( !preloader.classList.contains("preloader-done")) {
                 preloader.classList.add("preloader-done");
+                bodiSite.classList.remove("bodyNoScroll");
             }
         }, 1000);
     }

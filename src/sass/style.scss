@@ -1,7 +1,20 @@
 @import url('libs/_bootstrap-grid.scss');
 @import url('libs/_bootstrap-reboot.scss');
-// @import url('base/_fonts.scss');
+// @import url('base/_fonts.scss'); I CONNECTED THROUGH GOOGLE CDN
 @import url('base/_logo.scss');
+@import url('base/_base.scss');
+.confirmationBTN {
+    cursor: pointer;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    flex-direction: center;
+    &-green {
+        background-color: #689E2A;
+        color: white;
+        padding: 10px;
+    }
+}
 
 // font-family: 'Work Sans', sans-serif;
 // font-family: 'Roboto', sans-serif;
@@ -15,17 +28,104 @@
 }
 
 body {
-    
     font-family: 'Roboto', sans-serif;
 }
 
+.bodyNoScroll {
+    overflow: hidden;
+}
+
+
+//BLOCK FIRSTSCREEN
 @import url('blocks/_firstscreen.scss');
+.firstscreen {
+    height: 100vh;
+    background: linear-gradient(180deg, #689E2A 5.21%, rgba(196, 196, 196, 0) 100%);
+    background-repeat: no-repeat;
+    padding-top: 80px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        align-items: center;
+    }
+    &__right {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    &__left {
+        color: #fff;
+        width: 50%;
+        .confirmationBTN {
+            width: 33%;
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+        }
+        p {
+            font-size: 14px;
+            font-weight: 400;
+        }
+   
+    }
+    &__pulseborder {
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        flex-direction: column;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: .8;
+        h2 {
+            color: #53AF1E;
+            text-transform: uppercase;
+            font-weight: 900;
+            margin-top: 15px;
+            font-size: 30px;
+        }
+    }
+    &-icons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 12rem;
+        &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #689E2A;
+            font-size: 24px;
+            font-weight: 400;
+            img {
+                width: 40%;
+                height: 40%;
+            }
+            p {
+                font-size: 16px;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+//BLOCK PRELOADER
 @import url('base/_preloader.scss');
+//BLOCK HEADER
 @import url('blocks/_header.scss');
 .header {
     transition: .2s all linear;
     position: fixed;
     width: 100vw;
+    z-index: 9999999999;
     .container {
         height: 100%;
         display: flex;

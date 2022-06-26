@@ -59,8 +59,8 @@ gulp.task('watch', function() {
     gulp.watch("src/icons/**/*.+(png|svg)").on("change", gulp.parallel('icons'));
     gulp.watch("src/icons/**/*.+(png|svg)").on("change", browserSync.reload);
     
-    gulp.watch("src/img/**/*.+(jpg|jpeg)").on("change", gulp.parallel('images'));
-    gulp.watch("src/img/**/*.+(jpg|jpeg)").on("change", browserSync.reload);
+    gulp.watch("src/img/**/*.+(jpg|jpeg|png)").on("change", gulp.parallel('images'));
+    gulp.watch("src/img/**/*.+(jpg|jpeg|png)").on("change", browserSync.reload);
 
 });
 
