@@ -317,3 +317,65 @@ body {
         
     }
 }
+@import url('blocks/_combo.scss');
+.combo {
+    &-divide {
+        background: linear-gradient(77.74deg, #689E2A 0.27%, rgba(104, 158, 42, 0) 136.86%);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 50px 0;
+        &_reverse {
+            margin-top: 120px;
+            .combo-divide__img {
+                order: 1;
+            }
+            .combo-divide-offer {
+                order: -1;
+            }
+        }
+        &-offer {
+            display: flex;
+            height: 350px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            &__title {
+                font-weight: 600;
+                font-size: 36px;
+            }
+            &__text {
+                font-size: 24px;
+                font-weight: 400;
+            }
+            &__logo {
+                display: block;
+                margin: 0 auto;
+            }
+            &__btn {
+                width: 240px;
+                background-color: #fff;
+                color: #689E2A;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 24px;
+                border: none;
+                outline: 0;
+                &:hover {
+                    color: black;
+                    transform: scale(1.1);
+                    box-shadow: 0px 7px 5px 2px rgba(0, 0, 0, 0.3);
+                }
+                &:active {
+                    transition: .2s all ease-in-out;
+                    color: blue;
+                    transform: scale(0.8);
+                }
+                &::selection {
+                    color: black;
+                }
+            }
+        }
+    }
+}
