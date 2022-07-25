@@ -6,6 +6,7 @@
 let 
     bodiSite = document.querySelector(".bodyNoScroll"),
     preloader = document.getElementById("page-preloader"),
+    header = document.getElementById("header"),
     images = document.images,
     images_total_count = images.length,
     images_loaded_count = 0,
@@ -32,6 +33,7 @@ function image_loaded() {
             if( !preloader.classList.contains("preloader-done")) {
                 preloader.classList.add("preloader-done");
                 bodiSite.classList.remove("bodyNoScroll");
+                header.classList.remove("header-off");
             }
         }, 1000);
     }
