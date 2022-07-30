@@ -51,7 +51,19 @@ function myFunction() {
 
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
+    window.onclick = function(event) {
     if (!event.target.matches('.header-dropdown__btn')) {
+  
+      var dropdowns = document.getElementsByClassName("header-dropdown__content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  };{
   
       var dropdowns = document.getElementsByClassName("header-dropdown__content");
       var i;
@@ -64,3 +76,26 @@ window.onclick = function(event) {
     }
   };
 //HEADER LANGUAGE DROPDOWN - END
+
+
+//HAMBURGER OPEN-CLOSE - START
+let hamburger = document.querySelector('.hamburger'),
+  menu = document.querySelector('.header-mobileMenu'),
+  full = document.querySelector('.header-mobile__full');
+
+
+hamburger.addEventListener('click', function(e){
+  hamburger.classList.add("hamburger_active");
+  menu.classList.add('header-mobileMenu_active');
+  full.classList.add('active');
+});
+
+// Close the backside menu if the user clicks outside of it
+full.addEventListener('click', (e) =>{
+  if(e.target === full){
+
+    full.classList.remove('active');
+  }
+});
+//HAMBURGER OPEN-CLOSE - END
+
