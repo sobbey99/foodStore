@@ -65,7 +65,8 @@
     </div>
   
 </div>
-    <header class="header header-off" id="header">
+<!-- start header -->
+    <header class="header header-off header-pc" id="header">
         <div class="container">
             <ul class="header__list">
                 <li class="header__item"><a href="#" class="header__link">HOME</a>
@@ -106,15 +107,31 @@
                 суб.: 08:00 - 14:00 
             </p>
             <div class="header-dropdown">
-                <button onclick="myFunction()" class="header-dropdown__btn">#</button>
+                <button onclick="myFunction()" class="header-dropdown__btn"></button>
                 <div id="myDropdown" class="header-dropdown__content">
-                    <a href="#"> <img src="icons/english.png" alt="#" class="header-dropdown__flag">ENG</a>
-                    <a href="#"> <img src="icons/russia.png" alt="#" class="header-dropdown__flag">RUS</a>
-                    <a href="#"> <img src="icons/romania.png" alt="#" class="header-dropdown__flag">MD</a>
+                    <a href="#"> <img src="icons/english.png" alt="#" class="header-dropdown__flag"> <p class="header-dropdown__langtext">ENG</p></a>
+                    <a href="#"> <img src="icons/russia.png" alt="#" class="header-dropdown__flag"> <p class="header-dropdown__langtext">RUS</p></a>
+                    <a href="#"> <img src="icons/romania.png" alt="#" class="header-dropdown__flag"> <p class="header-dropdown__langtext">MD</p></a>
                   </div>
             </div>
         </div>
     </header>
+    <div class="header-mobile">
+        <div class="container">
+            <div class="header-mobile__wrapper">
+                <div class="header-mobile__logo">
+                    <img src="icons/svgLogo_white.svg" alt="MDFOOD" class="header-mobile__logoimage">
+                </div>
+
+                <div class="hamburger">
+                    <span class="hamburger_line"></span>
+                    <span class="hamburger_line"></span>
+                    <span class="hamburger_line"></span>
+                  </div>
+            </div>
+        </div>
+    </div>
+<!-- end header -->
 
     <section class="firstscreen">
         

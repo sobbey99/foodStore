@@ -39,6 +39,12 @@ body {
 //BLOCK FIRSTSCREEN
 @import url('blocks/_firstscreen.scss');
 .firstscreen {
+    .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
     height: 100vh;
     background: linear-gradient(180deg, #689E2A 5.21%, rgba(196, 196, 196, 0) 100%);
     background-repeat: no-repeat;
@@ -157,7 +163,7 @@ body {
         display: flex;
         list-style-type: none;
         margin: 0;
-        width: 65%;
+        width: 620px;
         justify-content: space-between;
         border-top: 1px solid white;
         border-bottom: 1px solid white;
@@ -258,7 +264,7 @@ body {
         display: inline-block;
         /* Dropdown Button */
         &__btn {
-            background-color: #3498DB;
+            background: url('../icons/langIcon_white.svg') center center / cover no-repeat;
             color: white;
             width: 50px;
             height: 50px;
@@ -267,16 +273,13 @@ body {
             border: none;
             cursor: pointer;
             /* Dropdown button on hover & focus */
-            &:hover, &:focus {
-                background-color: #2980B9;
-            }
         }
         /* Dropdown Content (Hidden by Default) */
         &__content {
             display: none;
             position: absolute;
-            background-color: #f1f1f1;
-            width: 50px;
+            background-color: #fff;
+            width: 55px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
             margin-top: 15px;
@@ -285,16 +288,26 @@ body {
             align-items: center;
             /* Links inside the dropdown */
             a {
-                color: black;
+                color: #689e2a;
                 text-decoration: none;
                 text-align: center;
-                display: flex;
+                width: 55px;
+                height: 35px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-content: center;
+                align-content: center;
                 align-items: center;
-                justify-content: space-between;
-                padding: 5px 10px;
                 /* Change color of dropdown links on hover */
                 &:hover {
-                    background-color: #ddd
+                    background-color: #689e2a;
+                    color: #fff;
+                }
+                img {
+                    margin-left: 3px;
+                }
+                p {
+                    margin-right: 1px;
                 }
             }
         }
@@ -302,8 +315,55 @@ body {
             width: 15px;
             height: 15px;
         }
+        &__langtext {
+            margin: 0;
+            padding: 0;
+        }
     }
 }
+// BLOCK HEADER-MOBILE
+.header-mobile {
+    display: none;
+    height: 100px;
+    background: rgba(104, 158, 42, .85);
+    .container {
+        height: 100%;
+        width: 100%;
+    }
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+    }
+    &__btn {
+        cursor: pointer;
+    }
+    .hamburger {
+    width: 40px;
+    height: 35px;
+    }
+    .hamburger_active span {
+      margin-bottom: -2px; }
+    .hamburger_active span:nth-child(1) {
+        transform: translateY(3px) rotate(-45deg); }
+    .hamburger_active span:nth-child(2) {
+        display: none; }
+    .hamburger_active span:nth-child(3) {
+        transform: translateY(3px) rotate(45deg); }
+    .hamburger_line {
+        display: block;
+        width: 100%;
+        height: 7px;
+        margin-bottom: 6px;
+        background-color: white;
+        transition: 0.5s all; 
+        border-radius: 3px;
+    }
+    
+}
+// BLOCK HOT-SALES
 @import url('blocks/_hot-sales.scss');
 .hot-sales {
     background-color: #E9FFDA;
@@ -391,6 +451,7 @@ body {
         
     }
 }
+// BLOCK COMBO
 @import url('blocks/_combo.scss');
 .combo {
     &-divide {
@@ -457,6 +518,7 @@ body {
         display: none;
     }
 }
+// BLOCK STEPS
 @import url('blocks/_steps.scss');
 .steps {
     padding: 50px 0;
@@ -510,6 +572,7 @@ body {
         justify-content: space-between;
     }
 }
+// BLOCK ABOUT
 @import url('blocks/_about.scss');
 .about {
    padding: 85px 0;
@@ -559,6 +622,7 @@ body {
         }
     }
 }
+// BLOCK FOOTER
 @import url('blocks/_footer.scss');
 .footer {
     background-color: #353535;
@@ -714,6 +778,7 @@ body {
         align-items: center;
     }
 }
+// BLOCK PRODUCTION
 @import url('blocks/_production.scss');
 .production {
   padding-top: 120px;
@@ -994,6 +1059,7 @@ font-size: 30px;
     column-gap: 50px;
   }
 }
+// BLOCK CART
 @import url('blocks/_cart.scss');
 .cart {
     padding-top: 80px;
@@ -1266,3 +1332,40 @@ font-size: 30px;
     }
 }
 
+// Hover On ADD BTN on CardItem
+.hot-item__btnadd {
+    cursor: pointer;
+    transition: .3 all linear;
+    &:hover {
+        background: #689E2A;
+        color: white;
+    }
+}
+
+// MEDIA REQUESTS
+@media  screen and (max-width: 1400px) {
+    /* 1. PAGE INDEX.HTML */
+
+
+}
+
+@media  screen and (max-width: 1200px) {
+    .header-pc {
+        display: none;
+    }
+    .header-mobile {
+        display: block;
+    }
+}
+
+@media  screen and (max-width: 991px) {
+    
+}
+
+@media  screen and (max-width: 776px) {
+    
+}
+
+@media  screen and (max-width: 575px) {
+    
+}
