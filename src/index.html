@@ -44,6 +44,7 @@
 </head>
 
 <body class="bodyNoScroll">
+    <!-- start preloader -->
 <div class="preloader" id="page-preloader">
     <div class="loader">
         <svg width="180" height="180" viewBox="0 0 59 71" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,6 +66,9 @@
     </div>
   
 </div>
+ <!-- end preloader -->
+
+
 <!-- start header -->
     <header class="header header-off header-pc" id="header">
         <div class="container">
@@ -150,7 +154,7 @@
                             <div class="header-mobileMenu__searching">
                                 <label for="mobileSearch">search</label>
                                 <div class="header-mobileMenu__searchingWrapper">
-                                    <input type="search" id="mobileSearch" name="mobileSearch" >
+                                    <input type="search" id="mobileSearch" name="mobileSearch" placeholder="Typing . . .">
                                 <button><img src="icons/searchButton.svg" alt="SEARCH"></button>
                                 </div>
                             </div>
@@ -168,12 +172,14 @@
                     </div>
 
 
-                    <!-- absolute elements -->
-                    <div class="header-mobileMenu__close">
-                        &#10006;
-                    </div>
+                    
                 </div>
             </div>
+        </div>
+
+        <!-- absolute elements -->
+        <div class="header-mobileMenu__close">
+            &#10006;
         </div>
        </div>
     </div>
