@@ -81,7 +81,8 @@ window.onclick = function(event) {
 //HAMBURGER OPEN-CLOSE - START
 let hamburger = document.querySelector('.hamburger'),
   menu = document.querySelector('.header-mobileMenu'),
-  full = document.querySelector('.header-mobile__full');
+  full = document.querySelector('.header-mobile__full'),
+  closeMobMenu = document.querySelector('.header-mobileMenu__close');
 
 
 hamburger.addEventListener('click', function(e){
@@ -95,7 +96,15 @@ full.addEventListener('click', (e) =>{
   if(e.target === full){
 
     full.classList.remove('active');
+    menu.classList.remove('header-mobileMenu_active');
+
   }
+});
+
+// Close the backside menu if the user clicks on X
+closeMobMenu.addEventListener('click', (e) => {
+    full.classList.remove('active');
+    menu.classList.remove('header-mobileMenu_active');
 });
 //HAMBURGER OPEN-CLOSE - END
 
