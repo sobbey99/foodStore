@@ -1586,10 +1586,68 @@ font-size: 30px;
 }
 
 @media  screen and (max-width: 991px) {
-    
+    .header-mobileMenu__langlink img,.firstscreen__pulseborder {
+        display: none;
+    }
+    .header-mobile .header-mobileMenu__langlink {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    .firstscreen {
+        height: 630px;
+    }
+    .firstscreen-icons {
+        align-items: center;
+        padding: 0;
+    }
+    .firstscreen__left .confirmationBTN {
+        width: 300px;
+        height: 50px;
+        align-items: center;
+    }
+    .hot-sales__wrapper {
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 2rem;
+        row-gap: 160px;
+    }
+    .combo-divide_reverse {
+        margin-top: 35px;
+    }
+    .combo-divide__img img {
+        width: 300px;
+    }
+    .about {
+        padding-top: 0;
+    }
+    .about__img {
+        width: 360px;
+    }
+    .about__wrapper {
+        column-gap: 10px;
+        grid-template-columns: 1fr 2fr;
+    }
+    .footer .container {
+        max-width: none;
+        width: 100vw;
+        padding: 0;
+    }
+    .footer-nav__list {
+        width: 80%;
+    }
+    .steps__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .mr27 {
+        margin-right: 27px;
+    }
+    .steps-item__img {
+        margin-bottom: 15px;
+    }
 }
 
-@media  screen and (max-width: 776px) {
+@media  screen and (max-width: 768px) {
     
 }
 
