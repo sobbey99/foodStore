@@ -1519,6 +1519,37 @@ font-size: 30px;
 
     }
 }
+// ELEMENTS THAT WILL APPEAR ON MOBILE VERSION
+.menu-arrow {
+    width: 100vw;
+    height: 60px;
+    background-color: rgba(255, 134, 18, 1);
+    border: 1px solid #689e2a;
+    position: fixed;
+    top: 100px;
+    z-index: 999999;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    align-items: center;
+    &__img {
+        width: 90%;
+        height: 90%;
+        transition: .3s all linear;
+    }
+    &_activated {
+        right: 0;
+        .menu-arrow__img {
+            transform: rotateY(180deg);
+        }
+    }
+    display: none;
+    &__text {
+        width: 90%;
+        height: 65%;
+    }
+}
+
 
 // Hover On ADD BTN on CardItem
 .hot-item__btnadd {
@@ -1542,6 +1573,7 @@ font-size: 30px;
 
 // 1200 DONE FOR :
 // 1. INDEX.HTML
+// 2. CATALOG.HTML
 @media  screen and (max-width: 1200px) {
     /* 1. PAGE INDEX.HTML */
     .header-pc {
@@ -1549,9 +1581,15 @@ font-size: 30px;
     }
     .header-mobile {
         display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        z-index: 99999999;
+        background: rgba(104,158,42,1);
     }
     .firstscreen {
-        padding-top: 0;
+        padding-top: 100px;
         &__wrapper {
             padding-top: 10px;
         }
@@ -1593,10 +1631,43 @@ font-size: 30px;
         transform: none;
         box-shadow: none;
     }
+    .footer-nav__list {
+        width: 100%;
+    }
+    /* 2. PAGE CATALOG.HTML */
+    .production {
+        padding-top: 100px;
+        .container {
+            max-width: none;
+            padding: 0;
+        }
+        &-left {
+            &__logo {
+                display: none;
+            }
+            &__menu {
+                height: 100%;
+            }
+        }
+        &__wrapper {
+            grid-template-columns: 3fr 7fr;
+            column-gap: 0px;
+        }
+        &-right {
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            &__wrapper {
+                row-gap: 110px;
+                column-gap: 25px;
+            }
+        }
+    }
 }
 
 // 991 DONE FOR :
 // 1. INDEX.HTML
+// 2. CATALOG.HTML
 @media  screen and (max-width: 991px) {
     /* 1. PAGE INDEX.HTML */
     .header-mobileMenu__langlink img,.firstscreen__pulseborder {
@@ -1658,10 +1729,15 @@ font-size: 30px;
     .steps-item__img {
         margin-bottom: 15px;
     }
+    /* 2. PAGE CATALOG.HTML */
+    .production-right__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 // 768 DONE FOR :
 // 1. INDEX.HTML
+// 2. CATALOG.HTML
 @media  screen and (max-width: 768px) {
     /* 1. PAGE INDEX.HTML */
     .firstscreen {
@@ -1815,14 +1891,50 @@ font-size: 30px;
             margin-bottom: 70px;
         }
     }
-    
-   
+    /* 2. PAGE CATALOG.HTML */
+    .production-right {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .production__wrapper {
+        grid-template-columns: 100%;
+        position: relative;
+    }
+    .menu-arrow{
+         display: grid;
+    }
+    .production-left__listlink {
+        font-size: 35px;
+        color: white;
+    }
+    .production-left {
+        position: absolute;
+        background-color: rgba(255, 134, 18, 1);
+        z-index: 3000;
+        height: 100%;
+        width: 75%;
+        transition: .6s all linear;
+        padding-top: 60px;
+        &__menu {
+            border: none;
+        }
+        left: -75%;
+        display: flex;
+        justify-content: space-between;
+        &_activated {
+            left: 0;
+        }
+    }
+    .production-left__listitem {
+        margin: 25px 0;
+    }
 }
 
 
 
 // 575 DONE FOR :
-// 1. 
+// 1. INDEX.HTML
+// 2.
 @media  screen and (max-width: 575px) {
     /* 1. PAGE INDEX.HTML */
     .header-mobile .header-mobileMenu__lang {
@@ -1888,5 +2000,22 @@ font-size: 30px;
     }
     .footer__link {
         border: none;
+    }
+    /* 2. PAGE CATALOG.HTML */
+    .production-right__wrapper {
+        grid-template-columns: 1fr;
+        padding: 0 30px;
+    }
+    .production-left__listlink {
+        font-size: 0.9rem;
+    }
+    .production-left__menu {
+        padding-top: 0;
+    }
+    .production-left__listitem {
+        margin: 25px 0;
+    }
+    .production-left__list {
+        padding-left: 15px;
     }
 }

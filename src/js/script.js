@@ -108,3 +108,14 @@ closeMobMenu.addEventListener('click', (e) => {
 });
 //HAMBURGER OPEN-CLOSE - END
 
+
+
+//Catalog LeftSideMenu Expanation
+let leftSideCatalogMenu = document.querySelector('.production-left'),
+    leftSideCatalogArrow = document.querySelector('.menu-arrow');
+    
+    leftSideCatalogArrow.addEventListener('click', function() {
+      leftSideCatalogMenu.classList.toggle('production-left_activated');
+      leftSideCatalogArrow.classList.toggle('menu-arrow_activated');
+    });
+
