@@ -45,7 +45,7 @@
 
 <body class="bodyNoScroll">
   <!-- start preloader -->
-  <div class="preloader" id="page-preloader">
+  <div class="preloader" id="page-preloader" style="z-index: 999999999999;">
     <div class="loader">
         <svg width="180" height="180" viewBox="0 0 59 71" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M35.2289 33.6977C35.2289 33.6977 36.832 30.8427 36.832 28.2269C36.832 25.6111 36.4583 24.49 33.8425 22.9952C31.2267 21.5005 28.7005 24.5685 28.7005 24.5685C28.7005 24.5685 26.7424 26.7321 27.8634 30.469C28.765 33.7005 30.3589 36.697 32.5346 39.2508L34.7767 35.5139C34.7767 35.5139 31.7872 35.1402 31.7872 34.7665V33.6977H35.2289ZM30.1056 30.469C28.2371 30.469 28.6108 29.348 29.0256 28.9743C29.4404 28.6006 30.4793 28.9743 31.6003 28.9743C32.7214 28.9743 32.7214 30.0954 32.4673 30.469C32.2132 30.8427 30.1056 30.4803 30.1056 30.4803V30.469Z" fill="#FF8612" stroke="#FF8612" stroke-miterlimit="10" class="svg-logo-1"></path>
@@ -68,7 +68,7 @@
 </div>
  <!-- end preloader -->
 
- 
+
 <!-- start header -->
     <header class="header header-off header-pc" id="header">
         <div class="container">
@@ -154,7 +154,7 @@
                             <div class="header-mobileMenu__searching">
                                 <label for="mobileSearch">search</label>
                                 <div class="header-mobileMenu__searchingWrapper">
-                                    <input type="search" id="mobileSearch" name="mobileSearch" >
+                                    <input type="search" id="mobileSearch" name="mobileSearch" placeholder="Typing . . .">
                                 <button><img src="icons/searchButton.svg" alt="SEARCH"></button>
                                 </div>
                             </div>
@@ -172,12 +172,14 @@
                     </div>
 
 
-                    <!-- absolute elements -->
-                    <div class="header-mobileMenu__close">
-                        &#10006;
-                    </div>
+                    
                 </div>
             </div>
+        </div>
+
+        <!-- absolute elements -->
+        <div class="header-mobileMenu__close">
+            &#10006;
         </div>
        </div>
     </div>
@@ -198,20 +200,21 @@
                     </div>
                 </div>
                 
-                <div class="cart-counter">
-                    <div class="cart-counter__minus">-</div>
-                    <div class="cart-counter__counter">1</div>
-                    <div class="cart-counter__plus">+</div>
-                </div>
-                <div class="cart-price">
-                    39$
-                    <div class="cart-delete">
-                        <div class="cart-delete__image">
-                            <img src="icons/trash.svg" alt="remove">
+                <div class="cart-wecount">
+                    <div class="cart-counter">
+                        <div class="cart-counter__minus">-</div>
+                        <div class="cart-counter__counter">1</div>
+                        <div class="cart-counter__plus">+</div>
+                    </div>
+                    <div class="cart-price">
+                        39$
+                        <div class="cart-delete">
+                            <div class="cart-delete__image">
+                                <img src="icons/trash.svg" alt="remove">
+                            </div>
                         </div>
                     </div>
                 </div>
-
                 
             </div>
 
@@ -226,76 +229,21 @@
                     </div>
                 </div>
                 
-                <div class="cart-counter">
-                    <div class="cart-counter__minus">-</div>
-                    <div class="cart-counter__counter">1</div>
-                    <div class="cart-counter__plus">+</div>
-                </div>
-                <div class="cart-price">
-                    39$
-                    <div class="cart-delete">
-                        <div class="cart-delete__image">
-                            <img src="icons/trash.svg" alt="remove">
+                <div class="cart-wecount">
+                    <div class="cart-counter">
+                        <div class="cart-counter__minus">-</div>
+                        <div class="cart-counter__counter">1</div>
+                        <div class="cart-counter__plus">+</div>
+                    </div>
+                    <div class="cart-price">
+                        39$
+                        <div class="cart-delete">
+                            <div class="cart-delete__image">
+                                <img src="icons/trash.svg" alt="remove">
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                
-            </div>
-
-            <div class="cart-item">
-                <div class="cart-item__details">
-                    <div class="cart-item__imgwrapper">
-                        <img src="img/tovar.png" alt="#" class="cart-item__image">
-                    </div>
-                    <div class="cart-descr">
-                        <div class="cart-item__id">арт. 123142 </div>
-                        <div class="cart-item__name">Terci de ovaz 1kg</div>
-                    </div>
-                </div>
-                
-                <div class="cart-counter">
-                    <div class="cart-counter__minus">-</div>
-                    <div class="cart-counter__counter">1</div>
-                    <div class="cart-counter__plus">+</div>
-                </div>
-                <div class="cart-price">
-                    39$
-                    <div class="cart-delete">
-                        <div class="cart-delete__image">
-                            <img src="icons/trash.svg" alt="remove">
-                        </div>
-                    </div>
-                </div>
-
-                
-            </div>
-
-            <div class="cart-item">
-                <div class="cart-item__details">
-                    <div class="cart-item__imgwrapper">
-                        <img src="img/orez.png" alt="#" class="cart-item__image">
-                    </div>
-                    <div class="cart-descr">
-                        <div class="cart-item__id">арт. 123142 </div>
-                        <div class="cart-item__name">Terci de ovaz 1kg</div>
-                    </div>
-                </div>
-                
-                <div class="cart-counter">
-                    <div class="cart-counter__minus">-</div>
-                    <div class="cart-counter__counter">1</div>
-                    <div class="cart-counter__plus">+</div>
-                </div>
-                <div class="cart-price">
-                    39$
-                    <div class="cart-delete">
-                        <div class="cart-delete__image">
-                            <img src="icons/trash.svg" alt="remove">
-                        </div>
-                    </div>
-                </div>
-
                 
             </div>
         </div>
