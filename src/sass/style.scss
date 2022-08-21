@@ -1549,7 +1549,14 @@ font-size: 30px;
         height: 50px;
     }
 }
-
+.cart-wecount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cart-price {
+    margin-top: 40px;
+}
 
 // Hover On ADD BTN on CardItem
 .hot-item__btnadd {
@@ -1760,6 +1767,9 @@ font-size: 30px;
         grid-template-columns: 1fr;
         column-gap: 0px;
         row-gap: 35px;
+    }
+    .cart-policy {
+        text-align: center;
     }
 }
 
@@ -2079,16 +2089,8 @@ font-size: 30px;
     .cart-form__street .part2-wrap {
         grid-template-columns: repeat(2, 120px);
     }
-    .cart-wecount {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
     .cart-item__imgwrapper {
         width: 90px;
-    }
-    .cart-price {
-        margin-top: 40px;
     }
     .cart-descr {
         margin-left: 10px;
