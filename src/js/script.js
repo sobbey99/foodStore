@@ -4,7 +4,8 @@
  }());
 // START PRELOADER 
 let 
-    bodiSite = document.querySelector(".bodyNoScroll"),
+    bodiSite = document.querySelector("body"),
+    htmlSite = document.querySelector('html'),
     preloader = document.getElementById("page-preloader"),
     header = document.getElementById("header"),
     images = document.images,
@@ -33,6 +34,7 @@ function image_loaded() {
             if( !preloader.classList.contains("preloader-done")) {
                 preloader.classList.add("preloader-done");
                 bodiSite.classList.remove("bodyNoScroll");
+                htmlSite.classList.remove("bodyNoScroll");
                 header.classList.remove("header-off");
             }
         }, 1000);
@@ -82,29 +84,35 @@ window.onclick = function(event) {
 let hamburger = document.querySelector('.hamburger'),
   menu = document.querySelector('.header-mobileMenu'),
   full = document.querySelector('.header-mobile__full'),
-  closeMobMenu = document.querySelector('.header-mobileMenu__close');
+  closeMobMenu = document.querySelector('.header-mobile__close'),
+  bodiOfSite = document.querySelector('body');
+  htmlOfSite = document.querySelector('html');
 
 
 hamburger.addEventListener('click', function(e){
   hamburger.classList.add("hamburger_active");
   menu.classList.add('header-mobileMenu_active');
   full.classList.add('active');
+  bodiOfSite.classList.add('noMoreScroll');
+  htmlOfSite.classList.add('noMoreScroll');
 });
 
 // Close the backside menu if the user clicks outside of it
-full.addEventListener('click', (e) =>{
-  if(e.target === full){
+// full.addEventListener('click', (e) =>{
+//   if(e.target === full){
 
-    full.classList.remove('active');
-    menu.classList.remove('header-mobileMenu_active');
+//     full.classList.remove('active');
+//     menu.classList.remove('header-mobileMenu_active');
 
-  }
-});
+//   }
+// });
 
 // Close the backside menu if the user clicks on X
 closeMobMenu.addEventListener('click', (e) => {
     full.classList.remove('active');
     menu.classList.remove('header-mobileMenu_active');
+    bodiOfSite.classList.remove('noMoreScroll');
+    htmlOfSite.classList.remove('noMoreScroll');
 });
 //HAMBURGER OPEN-CLOSE - END
 
@@ -114,7 +122,8 @@ closeMobMenu.addEventListener('click', (e) => {
 let leftSideCatalogMenu = document.querySelector('.production-left'),
     leftSideCatalogArrow = document.querySelector('.menu-arrow');
     
-    leftSideCatalogArrow.addEventListener('click', function() {
+
+    leftSideCatalogArrow.addEventListener('click', (e) => {
       leftSideCatalogMenu.classList.toggle('production-left_activated');
       leftSideCatalogArrow.classList.toggle('menu-arrow_activated');
     });
