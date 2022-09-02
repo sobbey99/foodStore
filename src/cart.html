@@ -69,6 +69,7 @@
  <!-- end preloader -->
 
 
+
 <!-- start header -->
 <header class="header header-off header-pc" id="header">
     <div class="container">
@@ -88,10 +89,10 @@
             <li class="header__item"><a href="#" class="header__link">SEARCH</a>
             <div class="header__dot"></div>
             </li>
-            <li class="header__item"><a href="#" class="header__link">LOGIN</a>
+            <li class="header__item"><a href="#" class="header__link" id="loginMenuClick">LOGIN</a>
             <div class="header__dot"></div>
             </li>
-            <li class="header__item"><a href="#" class="header__link">REGISTER</a>
+            <li class="header__item"><a href="#" class="header__link" id="registerMenuClick">REGISTER</a>
             <div class="header__dot"></div>
             </li>
             <li class="header__item">
@@ -410,6 +411,35 @@
         </div>
     </div>
 </footer>
+
+  <!-- modals -->
+  <div class="login-modal">
+    <div class="login-content">
+        <div class="login-title">Don't miss out, Login now !</div>
+        <form action="#" class="login-form">
+            <input type="text" class="login-form__input" id="loginForm" name="loginForm" placeholder="Email Address">
+            <input type="text" class="login-form__input" id="loginPass" name="loginPass" placeholder="Password">
+            <button class="login-form__btn" id="login-form__btn">Login</button>
+        </form>
+        <div class="login-close">
+            &times;
+        </div>
+    </div>
+</div>
+
+<div class="register-modal">
+    <div class="register-content">
+        <div class="register-title">Don't miss out, Register now !</div>
+        <form action="#" class="register-form">
+            <input type="text" class="register-form__input" id="registerForm" name="registerForm" placeholder="Email Address">
+            <input type="text" class="register-form__input" id="registerPass" name="registerPass" placeholder="Password">
+            <button class="register-form__btn" id="register-form__btn">register</button>
+        </form>
+        <div class="register-close">
+            &times;
+        </div>
+    </div>
+</div>
 
 <script src="js/script.js"></script>
 </body>

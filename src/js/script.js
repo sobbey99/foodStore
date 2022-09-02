@@ -116,15 +116,50 @@ closeMobMenu.addEventListener('click', (e) => {
 });
 //HAMBURGER OPEN-CLOSE - END
 
+if ( bodiOfSite.classList.contains('bodyCart') ) {
+  let leftSideCatalogMenu = document.querySelector('.production-left'),
+  leftSideCatalogArrow = document.querySelector('.menu-arrow');
+  
 
-
+  leftSideCatalogArrow.addEventListener('click', (e) => {
+    leftSideCatalogMenu.classList.toggle('production-left_activated');
+    leftSideCatalogArrow.classList.toggle('menu-arrow_activated');
+  });
+}
 //Catalog LeftSideMenu Expanation
-let leftSideCatalogMenu = document.querySelector('.production-left'),
-    leftSideCatalogArrow = document.querySelector('.menu-arrow');
-    
 
-    leftSideCatalogArrow.addEventListener('click', (e) => {
-      leftSideCatalogMenu.classList.toggle('production-left_activated');
-      leftSideCatalogArrow.classList.toggle('menu-arrow_activated');
+
+
+//Login Modal On/Off
+let loginMenuClick = document.querySelector('#loginMenuClick'),
+    loginMenuModal = document.querySelector('.login-modal'),
+    loginMenuClose = document.querySelector('.login-close');
+
+    loginMenuClick.addEventListener('click', function() {
+      loginMenuModal.classList.add('login-modal_active');
+      bodiOfSite.classList.add('noMoreScroll');
+      htmlOfSite.classList.add('noMoreScroll');
     });
 
+    loginMenuClose.addEventListener('click', function() {
+      loginMenuModal.classList.remove('login-modal_active');
+      bodiOfSite.classList.remove('noMoreScroll');
+      htmlOfSite.classList.remove('noMoreScroll');
+    });
+
+//Register Modal On/Off
+let registerMenuClick = document.querySelector('#registerMenuClick'),
+registerMenuModal = document.querySelector('.register-modal'),
+registerMenuClose = document.querySelector('.register-close');
+
+registerMenuClick.addEventListener('click', function() {
+  registerMenuModal.classList.add('register-modal_active');
+  bodiOfSite.classList.add('noMoreScroll');
+  htmlOfSite.classList.add('noMoreScroll');
+});
+
+registerMenuClose.addEventListener('click', function() {
+  registerMenuModal.classList.remove('register-modal_active');
+  bodiOfSite.classList.remove('noMoreScroll');
+  htmlOfSite.classList.remove('noMoreScroll');
+});
