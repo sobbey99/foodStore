@@ -85,7 +85,7 @@
                 <li class="header__item"><a href="#" class="header__link">CONTACT</a>
                 <div class="header__dot"></div>
                 </li>
-                <li class="header__item"><a href="#" class="header__link">SEARCH</a>
+                <li class="header__item"><a href="#" class="header__link" id="searchMenuClick">SEARCH</a>
                 <div class="header__dot"></div>
                 </li>
                 <li class="header__item"><a href="#" class="header__link" id="loginMenuClick">LOGIN</a>
@@ -168,9 +168,9 @@
                     <div class="header-mobileMenu__bottom">
                         <ul class="header-mobileMenu__list">
                             <li class="header-mobileMenu__listitem"><a href="#" class="header-mobileMenu__listlink">My Cart</a></li>
-                         <li class="header-mobileMenu__listitem"><a href="#" class="header-mobileMenu__listlink">Login/Register</a></li>
+                         <li class="header-mobileMenu__listitem"><a href="#" class="header-mobileMenu__listlink" id="loginMobileMenuClick">Login</a></li>
+                            <li class="header-mobileMenu__listitem"><a href="#" class="header-mobileMenu__listlink" id="registerMobileMenuClick">Register</a></li>
                             <li class="header-mobileMenu__listitem"><a href="#" class="header-mobileMenu__listlink">Catalog</a></li>
-                            <li class="header-mobileMenu__listitem"><a href="#" class="header-mobileMenu__listlink">About Us</a></li>
                             <li class="header-mobileMenu__listitem"><a href="#" class="header-mobileMenu__listlink">Contact</a></li>
                         </ul>
                     </div>
@@ -537,6 +537,17 @@ with your products
                 <button class="register-form__btn" id="register-form__btn">register</button>
             </form>
             <div class="register-close">
+                &times;
+            </div>
+        </div>
+    </div>
+    <div class="search-modal">
+        <div class="search-content">
+            <div class="search-search">
+                <input type="text" placeholder="Search . . ." class="search-input">
+                <img src="icons/searchButton.svg" alt="SEARCH" class="search-img">
+            </div>
+            <div class="search-close">
                 &times;
             </div>
         </div>

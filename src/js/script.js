@@ -133,9 +133,17 @@ if ( bodiOfSite.classList.contains('bodyCart') ) {
 //Login Modal On/Off
 let loginMenuClick = document.querySelector('#loginMenuClick'),
     loginMenuModal = document.querySelector('.login-modal'),
-    loginMenuClose = document.querySelector('.login-close');
+    loginMenuClose = document.querySelector('.login-close'),
+    loginMobileMenuClick = document.querySelector('#loginMobileMenuClick');
+
 
     loginMenuClick.addEventListener('click', function() {
+      loginMenuModal.classList.add('login-modal_active');
+      bodiOfSite.classList.add('noMoreScroll');
+      htmlOfSite.classList.add('noMoreScroll');
+    });
+
+    loginMobileMenuClick.addEventListener('click', function() {
       loginMenuModal.classList.add('login-modal_active');
       bodiOfSite.classList.add('noMoreScroll');
       htmlOfSite.classList.add('noMoreScroll');
@@ -150,7 +158,8 @@ let loginMenuClick = document.querySelector('#loginMenuClick'),
 //Register Modal On/Off
 let registerMenuClick = document.querySelector('#registerMenuClick'),
 registerMenuModal = document.querySelector('.register-modal'),
-registerMenuClose = document.querySelector('.register-close');
+registerMenuClose = document.querySelector('.register-close'),
+registerMobileMenuClick = document.querySelector('#registerMobileMenuClick');
 
 registerMenuClick.addEventListener('click', function() {
   registerMenuModal.classList.add('register-modal_active');
@@ -160,6 +169,29 @@ registerMenuClick.addEventListener('click', function() {
 
 registerMenuClose.addEventListener('click', function() {
   registerMenuModal.classList.remove('register-modal_active');
+  bodiOfSite.classList.remove('noMoreScroll');
+  htmlOfSite.classList.remove('noMoreScroll');
+});
+
+registerMobileMenuClick.addEventListener('click', function() {
+  registerMenuModal.classList.add('register-modal_active');
+  bodiOfSite.classList.add('noMoreScroll');
+  htmlOfSite.classList.add('noMoreScroll');
+});
+
+// Search modal On/Off
+let searchMenuClick = document.querySelector('#searchMenuClick'),
+    searchModal = document.querySelector('.search-modal'),
+    searchModalClose = document.querySelector('.search-close');
+
+searchMenuClick.addEventListener('click', function() {
+  searchModal.classList.add('search-modal_active');
+  bodiOfSite.classList.add('noMoreScroll');
+  htmlOfSite.classList.add('noMoreScroll');
+});
+
+searchModalClose.addEventListener('click', function() {
+  searchModal.classList.remove('search-modal_active');
   bodiOfSite.classList.remove('noMoreScroll');
   htmlOfSite.classList.remove('noMoreScroll');
 });
